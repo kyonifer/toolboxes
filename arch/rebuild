@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+docker build -t toolbox-arch .
+podman stop arch || podman rm arch || true
+toolbox create --container arch --image toolbox-arch
